@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JAVA_OPTS='-Dkarate.config.dir=/config'
+JAVA_OPTS='-Dkarate.config.dir=./config'
 
 IFS=';'
 mapfile -t lines < <(echo "$INPUT_TESTS" | grep -v "^$")

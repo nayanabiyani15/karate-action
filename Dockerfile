@@ -7,6 +7,6 @@ RUN wget -O karate.jar https://github.com/intuit/karate/releases/download/v$KARA
 # We need bash instead of sh to be able to run entrypoint.sh
 RUN apk add --no-cache bash
 COPY entrypoint.sh /
-COPY config /
+COPY ./config/ /config/
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
