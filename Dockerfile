@@ -8,5 +8,7 @@ RUN wget -O karate.jar https://github.com/intuit/karate/releases/download/v$KARA
 RUN apk add --no-cache bash
 COPY entrypoint.sh /
 COPY ./config/ /config/
+RUN ls -l /config
+RUN ls -l
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
